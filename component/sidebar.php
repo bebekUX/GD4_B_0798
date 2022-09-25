@@ -20,8 +20,10 @@ session_start();
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <linkhref="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
-            rel="stylesheet">
+        <linkhref="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"rel="stylesheet">
+        <linkhref="https://kit.fontawesome.com/a076d05399.js">
+        <linkhref="https://kit.fontawesome.com/a076d05399.js">
+
         <title>Dashboard!</title>
         <style>
             *{
@@ -62,20 +64,21 @@ session_start();
                 <div class="menu">
                     <div class="content-menu" >
                         <i class="fa fa-dashboard"></i>
-                        <a href="./dashboardPage.php" style="font-weight:600"
-                        >Dashboard</a>
+                        <a href="./dashboardPage.php" style="font-weight:600">Dashboard</a>
+                    </div>
+                    <div class="content-menu " >
+                        <i class="fa fa-user"></i>
+                        <a href="./EditProfilePage.php" style="font-weight:600">Edit Profile</a>
                     </div>
                     <div class="content-menu " >
                         <i class="fa fa-film"></i>
-                        <a href="./listMoviesPage.php" style="font-
-                        weight:600">List Movie</a>
+                        <a href="./listMoviesPage.php" style="font-weight:600">List Movie</a>
                     </div>
                     <div class="content-menu " >
                         <i class="fa fa-sign-out"></i>
-                        <a href="../process/logoutProcess.php" style="font-
-                            weight:600">&nbspLogout</a>
-                </div>
-                <hr>
+                        <a href="../process/logoutProcess.php" style="font-weight:600">&nbspLogout</a>
+                    </div>
+                    <hr>
             </div>
         </div>
     '
