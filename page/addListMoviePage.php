@@ -13,27 +13,27 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 <form action="../process/addMovieProcess.php" method="post">
     <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Name</label>
-        <input class="form-control" id="name" name="name">
+        <input class="form-control" id="name" name="name" placeholder="Name">
     </div>
 
     <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Genre</label>
-        <input class="form-control" id="genre" name="genre">
+        <input class="form-control" id="genre" name="genre" placeholder="Genre">
     </div>
 
     <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Release</label>
-        <input class="form-control" id="realese" name="realese">
+        <input class="form-control" id="realese" name="realese" placeholder="Release">
     </div>
      
     <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Season</label>
-        <input class="form-control" id="season" name="season">
+        <input class="form-control" id="season" name="season" placeholder="Season">
     </div>
 
     <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Synopsis</label>
-        <input class="form-control" id="synopsis" name="synopsis">
+        <input class="form-control" id="synopsis" name="synopsis" placeholder="Synopsis">
     </div>
 
     <div class="d-grid gap-2">
