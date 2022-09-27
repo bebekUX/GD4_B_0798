@@ -1,6 +1,14 @@
 <?php
     include '../component/sidebar.php';
-    include ('../db.php');
+    $id = $_SESSION['id'];
+        $query = mysqli_query($con, "SELECT * FROM users WHERE id=$id") or die(mysqli_error($con));
+        $data = mysqli_fetch_array($query);
+
+        $name = $data['name'];
+        $phonenum = $data['phonenum'];
+        $email = $data['email'];
+        $job = $data['job'];
+        $membership = $data['membership'];
 ?>
 
 <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
@@ -11,25 +19,26 @@
         <i class='fa fa-angle-left fa-3x'  style="color: green"></i> </a>
     </div>
     <hr>
-
-    <form class="row g-3">
+    <table class="table ">
+      <form action="../process/editProfileProcess.php" method="post">
               <div class="mb-3">
                 <label for="fullname" class="form-label">Name</label>
-                <input type="text"    class="form-control" id="name" placeholder="Name" name="name">
+                <input class="form-control" id="name" placeholder="Name" name="name" value="<?php echo $name; ?>">
               </div>
 
               <div class="mb-3">
                 <label for="PhoneNumber" class="form-label">Phone Number</label>
-                <input type="text"    class="form-control" id="phonenum" placeholder="PhoneNumber" name="phonenum">
+                <input class="form-control" id="phonenum" placeholder="PhoneNumber" name="phonenum"  value="<?php echo $phonenum; ?>">
               </div>
+
               <div class="mb-3">
                 <label for="inputEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                <input class="form-control" id="email" placeholder="Email" name="email" value="<?php echo $email; ?>">
               </div>
 
               <div class="mb-3">
                 <label for="Job" class="form-label">Job</label>
-                  <select class="form-select" id="job"  name="job">
+                  <select class="form-select" id="job"  name="job"  value="<?php echo $job; ?>">
                     <option selected disabled >Select Job</option>
                     <option value="collage">Collage Student</option>
                     <option value="SHS">Senior High School</option>
@@ -39,13 +48,15 @@
 
               <div class="mb-3">
                 <label for="Membership" class="form-label">Membership</label>
-                <input type="membership" class="form-control" id="membership" placeholder="Membership" name="membership">
+                <input class="form-control" id="membership" placeholder="Membership" name="membership"  value="<?php echo $membership; ?>" readonly>
               </div>
 
               <div class="d-grid gap-2">
               <button type="submit" class="btn btn-primary" type="editProfile">Save</button>
             </div>
     </form>
+    </table>
+    </div>
     </aside>
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
